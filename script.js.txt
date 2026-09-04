@@ -1,3 +1,97 @@
-function showMessage() {
-    alert("PR MODE ACTIVATED 🔥");
+/* =========================
+   NUMBER ANIMATION
+========================= */
+
+function animateNumber(element, target, duration) {
+
+    let start = 0;
+
+    const startTime = performance.now();
+
+    function update(currentTime) {
+
+        const progress = Math.min(
+            (currentTime - startTime) / duration,
+            1
+        );
+
+        const value = Math.floor(
+            progress * target
+        );
+
+        element.textContent = value;
+
+        if (progress < 1) {
+            requestAnimationFrame(update);
+        }
+    }
+
+    requestAnimationFrame(update);
 }
+
+
+/* =========================
+   PAGE LOAD ANIMATION
+========================= */
+
+window.addEventListener("load", function () {
+
+    animateNumber(
+        document.getElementById("totalNumber"),
+        330,
+        1800
+    );
+
+    animateNumber(
+        document.getElementById("benchNumber"),
+        90,
+        1400
+    );
+
+    animateNumber(
+        document.getElementById("squatNumber"),
+        105,
+        1500
+    );
+
+    animateNumber(
+        document.getElementById("deadliftNumber"),
+        135,
+        1600
+    );
+
+});
+
+
+/* =========================
+   WORKOUT BUTTON
+========================= */
+
+function completeWorkout() {
+
+    const button = document.querySelector(".complete-button");
+
+    button.textContent = "WORKOUT COMPLETED ✓";
+
+    button.style.background = "#222";
+    button.style.color = "white";
+
+    button.style.border = "1px solid #444";
+
+    alert(
+        "🔥 WORKOUT COMPLETED!\n\nKeep getting stronger, Karthikeyan."
+    );
+}
+
+
+/* =========================
+   CONSOLE MESSAGE
+========================= */
+
+console.log(
+    "💪 POWERLIFTING DASHBOARD LOADED"
+);
+
+console.log(
+    "Bench: 90 KG | Squat: 105 KG | Deadlift: 135 KG"
+);
