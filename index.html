@@ -1,36 +1,322 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Powerlifting Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Karthikeyan | Powerlifting Dashboard</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>MY POWERLIFTING DASHBOARD</h1>
+    <!-- Background decoration -->
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
 
-    <div class="container">
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">K<span>.</span></div>
 
-        <div class="card">
-            <h2>🏋️ BENCH PRESS</h2>
-            <p id="bench">90 KG</p>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#stats">PRs</a>
+            <a href="#goals">Goals</a>
+            <a href="#workout">Workout</a>
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">PERSONAL POWERLIFTING DASHBOARD</p>
+
+            <h1>
+                KARTHIKEYAN
+            </h1>
+
+            <p class="hero-text">
+                Strength. Discipline. Progress.
+            </p>
+
+            <div class="hero-total">
+                <span id="totalNumber">330</span>
+                <small>KG TOTAL</small>
+            </div>
+
+            <a href="#stats" class="main-button">
+                VIEW MY STATS ↓
+            </a>
+
         </div>
 
-        <div class="card">
-            <h2>🦵 SQUAT</h2>
-            <p id="squat">105 KG</p>
+    </section>
+
+
+    <!-- PR STATS -->
+    <section id="stats" class="section">
+
+        <div class="section-heading">
+            <p>PERSONAL RECORDS</p>
+            <h2>THE BIG THREE</h2>
         </div>
 
-        <div class="card">
-            <h2>💀 DEADLIFT</h2>
-            <p id="deadlift">135 KG</p>
+        <div class="stats-container">
+
+            <div class="stat-card">
+                <div class="stat-number" id="benchNumber">90</div>
+                <h3>BENCH PRESS</h3>
+                <span>KG • PR</span>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number" id="squatNumber">105</div>
+                <h3>SQUAT</h3>
+                <span>KG • PR</span>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number" id="deadliftNumber">135</div>
+                <h3>DEADLIFT</h3>
+                <span>KG • PR</span>
+            </div>
+
         </div>
 
-    </div>
+    </section>
 
-    <h2>Total: <span id="total">330 KG</span></h2>
 
-    <button onclick="showMessage()">CLICK ME</button>
+    <!-- PROGRESS -->
+    <section class="section">
+
+        <div class="section-heading">
+            <p>STRENGTH LEVEL</p>
+            <h2>MY PROGRESS</h2>
+        </div>
+
+        <div class="progress-box">
+
+            <div class="progress-item">
+
+                <div class="progress-title">
+                    <span>Bench Press</span>
+                    <strong>90 KG</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill bench-fill"></div>
+                </div>
+
+            </div>
+
+
+            <div class="progress-item">
+
+                <div class="progress-title">
+                    <span>Squat</span>
+                    <strong>105 KG</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill squat-fill"></div>
+                </div>
+
+            </div>
+
+
+            <div class="progress-item">
+
+                <div class="progress-title">
+                    <span>Deadlift</span>
+                    <strong>135 KG</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill deadlift-fill"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GOAL -->
+    <section id="goals" class="section">
+
+        <div class="section-heading">
+            <p>NEXT TARGET</p>
+            <h2>100 KG BENCH</h2>
+        </div>
+
+        <div class="goal-card">
+
+            <div class="goal-main">
+                <span>CURRENT PR</span>
+                <strong>90 KG</strong>
+            </div>
+
+            <div class="goal-arrow">→</div>
+
+            <div class="goal-main">
+                <span>GOAL</span>
+                <strong>100 KG</strong>
+            </div>
+
+            <div class="goal-progress">
+
+                <div class="goal-progress-bar">
+                    <div class="goal-fill"></div>
+                </div>
+
+                <p>90% COMPLETE • 10 KG TO GO</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ACHIEVEMENTS -->
+    <section class="section">
+
+        <div class="section-heading">
+            <p>ACHIEVEMENTS</p>
+            <h2>UNLOCKED</h2>
+        </div>
+
+        <div class="achievement-container">
+
+            <div class="achievement unlocked">
+                <div class="achievement-icon">🏆</div>
+                <div>
+                    <h3>300 KG TOTAL</h3>
+                    <p>ACHIEVED</p>
+                </div>
+            </div>
+
+
+            <div class="achievement unlocked">
+                <div class="achievement-icon">🔥</div>
+                <div>
+                    <h3>330 KG TOTAL</h3>
+                    <p>ACHIEVED</p>
+                </div>
+            </div>
+
+
+            <div class="achievement locked">
+                <div class="achievement-icon">🔒</div>
+                <div>
+                    <h3>100 KG BENCH</h3>
+                    <p>LOCKED</p>
+                </div>
+            </div>
+
+
+            <div class="achievement locked">
+                <div class="achievement-icon">💀</div>
+                <div>
+                    <h3>400 KG TOTAL</h3>
+                    <p>LOCKED</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WORKOUT -->
+    <section id="workout" class="section">
+
+        <div class="section-heading">
+            <p>TRAINING</p>
+            <h2>MY WORKOUT</h2>
+        </div>
+
+        <div class="workout-card">
+
+            <div class="workout-header">
+                <div>
+                    <span>TODAY'S SESSION</span>
+                    <h3>STRENGTH DAY</h3>
+                </div>
+
+                <div class="workout-status">
+                    ACTIVE
+                </div>
+            </div>
+
+
+            <div class="exercise">
+
+                <div>
+                    <h3>Bench Press</h3>
+                    <p>Strength Focus</p>
+                </div>
+
+                <strong>5 × 3</strong>
+
+            </div>
+
+
+            <div class="exercise">
+
+                <div>
+                    <h3>Incline Dumbbell Press</h3>
+                    <p>Upper Chest</p>
+                </div>
+
+                <strong>3 × 8</strong>
+
+            </div>
+
+
+            <div class="exercise">
+
+                <div>
+                    <h3>Triceps Pushdown</h3>
+                    <p>Triceps</p>
+                </div>
+
+                <strong>3 × 12</strong>
+
+            </div>
+
+
+            <button class="complete-button" onclick="completeWorkout()">
+                COMPLETE WORKOUT ✓
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h2>KEEP GETTING STRONGER.</h2>
+
+        <p>
+            Built by Karthikeyan • Powerlifting Dashboard
+        </p>
+
+        <div class="footer-line"></div>
+
+        <p class="copyright">
+            © 2026 Karthikeyan
+        </p>
+
+    </footer>
+
 
     <script src="script.js"></script>
 
